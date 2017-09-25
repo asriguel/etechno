@@ -1,0 +1,898 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+	<meta charset="utf-8">
+
+	<title>Title</title>
+	<meta name="description" content="">
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"> -->
+	<meta name="viewport" content="width=1920">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+	<script src="libs/jquery/dist/jquery.min.js"></script>
+	<!-- bootstrap -->
+	<link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+	<script src="libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+	<!-- jquery ui -->
+	<link rel="stylesheet" href="libs/jrange-master/jquery.range.css">
+
+	<!-- normalize -->
+	<link rel="stylesheet" href="libs/normalize-css/normalize.css">
+	<!-- reset -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+	<link rel="stylesheet" href="css/checkbox-css-snippet.css">
+
+	<link href="libs/select2/dist/css/select2.min.css" rel="stylesheet" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.4/js/select2.min.js"></script>
+
+	<!-- font -->
+	<!-- <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet"> -->
+
+
+
+
+	<!-- Chrome, Firefox OS and Opera -->
+	<meta name="theme-color" content="#000">
+	<!-- Windows Phone -->
+	<meta name="msapplication-navbutton-color" content="#000">
+	<!-- iOS Safari -->
+	<meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+	<style>
+		body {
+			opacity: 0;
+			overflow-x: hidden;
+		}
+
+		html {
+			background-color: #fff;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div class="main-wrap">
+		<div class="wrapper">
+			<div class="container">
+				<!-- navigation -->
+				<div class="row">
+					<div class="col-md-12">
+						<nav class="nav">
+							<ul class="nav__list">
+								<li class="nav__item">
+									<a href="#">	
+									Бытовая техника
+								</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">	
+									Электроника
+								</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">	
+									Компьютерная техника
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">	
+										Телефония
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">	
+											Красота и здоровье
+									</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">	
+												Другие категории
+										</a>
+								</li>
+								<li class="nav__item">
+									<a href="#">Услуги</a>
+								</li>
+								<li class="nav__item item_warning">
+									<a href="#">Акции <i class="nav__icon"><img src="img/icon-sales.svg" alt=""></i></a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+
+				<!-- breadcrumbs -->
+				<div class="row">
+					<div class="col-md-12">
+						<div class="breadcrumbs _underline">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item">
+									<a href="#">Главная</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="#">Услуги</a>
+								</li>
+								<li class="breadcrumbs__item">
+									<a href="#">Доставка</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<!-- tags -->
+				<div class="row">
+					<div class="col-md-12">
+						<!-- TODO: check names classes -->
+						<div class="tags-popular _underline">
+							<span class="tags__title">Популярное в категории:</span>
+							<ul class="tags__list">
+								<li class="tag tags-popular__item"><a href="#">
+									Газовые
+								</a>
+								</li>
+								<li class="tag tags-popular__item"><a href="">
+									Индукционные
+								</a>
+								</li>
+								<li class="tag tags-popular__item">
+									<a href="">
+									В рассрочку</a>
+								</li>
+								<li class="tag tags-popular__item"><a href="#">
+										Газовые
+									</a>
+								</li>
+								<li class="tag tags-popular__item"><a href="">
+										Индукционные
+									</a>
+								</li>
+								<li class="tag tags-popular__item">
+									<a href="">
+										В рассрочку</a>
+								</li>
+							</ul>
+							<a href="#" class="link link-show-more  tags-popular__link">Показать еще 18</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<!-- sidebar -->
+					<div class="col-md-3">
+						<!-- TODO: add select -->
+						<div class="filter-sorting sorting-form sorting-form_big">
+							<form action="">
+								<select name="" style="width: 100%" class="sorting-form__select" id="">
+									<option value="">Все города/магазины</option>
+									<option value="">Минск</option>
+									<option value="">Гродно</option>
+								</select>
+							</form>
+						</div>
+						<div class="filters-wrapper">
+							<div class="filter filter-block filters-products">
+								<form action="">
+									<div class="filter__accordion filter__block">
+										<a class="filter__toggle filter__title" data-toggle="collapse" href="#filter1">Производитель</a>
+										<div class="filter__collapse collapse in" id="filter1">
+											<ul class="filter__list">
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																AEG
+																	<input type="checkbox" checked="checked" />
+																<div class="control_indicator"></div>
+													</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																Beko
+																	<input type="checkbox" />
+																<div class="control_indicator"></div>
+															</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																Bosch
+																	<input type="checkbox" />
+																<div class="control_indicator"></div>
+															</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	AEG
+																		<input type="checkbox" checked="checked" />
+																	<div class="control_indicator"></div>
+														</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	Beko
+																		<input type="checkbox" />
+																	<div class="control_indicator"></div>
+																</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	Bosch
+																		<input type="checkbox" />
+																	<div class="control_indicator"></div>
+																</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="filter__accordion filter__block">
+										<a class="filter__toggle filter__title" data-toggle="collapse" href="#filter2">Цена</a>
+										<div class="filter__collapse collapse" id="filter2">
+
+											<div id="filterPriceSlider" class="filter__slider-range ">
+												<input type="hidden" class="slider-input" value="23" />
+											</div>
+											<div class="slider-controls-wrapper clearfix">
+												<input type="text" class="slider-control slider-control_left slider-value" data-index="0" value="10" />
+												<input type="text" class="slider-control slider-control_right slider-value" data-index="1" value="90" />
+											</div>
+										</div>
+									</div>
+
+									<div class="filter__accordion filter__block">
+										<a class="filter__toggle filter__title" data-toggle="collapse" href="#filter3">Тип варочной панели</a>
+										<div class="filter__collapse collapse" id="filter3">
+											<ul class="filter__list">
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	AEG
+																		<input type="checkbox" checked="checked" />
+																	<div class="control_indicator"></div>
+														</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	Beko
+																		<input type="checkbox" />
+																	<div class="control_indicator"></div>
+																</label>
+												</li>
+												<li>
+													<label class="control control-checkbox filter__checkbox-item">
+																	Bosch
+																		<input type="checkbox" />
+																	<div class="control_indicator"></div>
+																</label>
+												</li>
+											</ul>
+										</div>
+									</div>
+
+									<div class="filter__block">
+										<a href="#" class="filter__link link">Сбросить фильтр</a>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+
+
+
+					<!-- main content -->
+					<div class="col-md-9">
+						<div class="section-header clearfix _underline">
+							<h2 class="section-title pull-left">
+								Плиты <span class="count">245</span>
+							</h2>
+							<!-- TODO float delete please -->
+							<div class="pull-right">
+								<div class="sorting-form">
+									<form action="">
+										<span class="select-title">Сортировать по:</span>
+										<select name="" id="" class="sorting-form__select custom-select">
+													<option value="">Популярности</option>
+													<option value="">Цене</option>
+												</select>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="tags-category">
+							<!-- выводить и считать нужно при пом. js -->
+							<ul class="tags__list tags__line">
+								<li class="tag tags-category__item">
+									<a href="#">
+										Халва 5 мес. <span class="tag__count">23</span>
+									</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+										Халва 6 мес. <span class="tag__count">40</span>
+									</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+										Карта покупок <span class="tag__count">18</span>
+									</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+												Рассрочка 5 мес. <span class="tag__count">23</span>
+											</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+												Рассрочка 10 мес. <span class="tag__count">40</span>
+											</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+														Карта Магнит <span class="tag__count">9</span>
+												</a>
+								</li>
+								<li class="tag tags-category__item">
+									<a href="#">
+													Карта Черепаха <span class="tag__count">3</span>
+												</a>
+								</li>
+
+							</ul>
+							<a href="#" class="link link-show-more tags-category__link">Показать еще 3</a>
+						</div>
+						<section class="products-block">
+							<div class="row">
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+														-50%
+												</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+											<img src="img/product.png" alt="">
+										</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+														Выгода 999р.
+												</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+															-50%
+													</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+												<img src="img/product.png" alt="">
+											</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+															Выгода 999р.
+													</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																-50%
+														</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+													<img src="img/product.png" alt="">
+												</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																Выгода 999р.
+														</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																	-50%
+															</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+														<img src="img/product.png" alt="">
+													</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																	Выгода 999р.
+															</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<!-- banner -->
+								<div class="col-md-4">
+									<div class="banner">
+										<div class="banner__img">
+											<img src="img/banner1.png" alt="">
+										</div>
+									</div>
+								</div>
+								<!-- end banner -->
+
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																		-50%
+																</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+															<img src="img/product.png" alt="">
+														</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																		Выгода 999р.
+																</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																		-50%
+																</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+															<img src="img/product.png" alt="">
+														</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																		Выгода 999р.
+																</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																			-50%
+																	</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+																<img src="img/product.png" alt="">
+															</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																			Выгода 999р.
+																	</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+
+								<!-- banner -->
+								<div class="col-md-4">
+									<div class="banner">
+										<div class="banner__img">
+											<img src="img/banner2.png" alt="">
+										</div>
+									</div>
+								</div>
+								<!-- end banner -->
+
+								<!-- big banner -->
+								<div class="col-md-8">
+									<div class="banner">
+										<div class="banner__img">
+											<img src="img/banner3.png" alt="">
+										</div>
+									</div>
+								</div>
+								<!-- end big banner -->
+
+								<div class="col-md-4">
+									<div class="product-card">
+										<div class="product-card__header">
+											<div class="product-card__title">
+												<a href="#">Холодильник с нижней морозильной камерой Samsung RB37J5200SA</a>
+											</div>
+											<div class="product-card__caption">
+												<span class="lbl lbl_red">
+																				-50%
+																		</span>
+
+											</div>
+											<div class="clearfix"></div>
+											<div class="product-card__ratings">
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+												<span class="glyphicon glyphicon-star"></span>
+											</div>
+											<div class="product-card__indicator">
+												<span>мало</span>
+												<span class="indicator indicator_red"></span>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+										<a href="#" class="product-card__img">
+																	<img src="img/product.png" alt="">
+																</a>
+										<div class="product-card__footer">
+											<div class="product-card__prices price-block">
+												<div class="price-block__old price">2999<sup>99</sup><span>р.</span></div>
+												<div class="price-block__benefit"><span class="lbl lbl_red lbl_o">
+																				Выгода 999р.
+																		</span>
+												</div>
+												<div class="price-block__actual price">1999<sup>99</sup><span>р.</span></div>
+											</div>
+											<div class="product-card__tools">
+												<div class="btn-group">
+													<a href="#" class="product-card__btn product-card__btn_compare"></a>
+													<a href="#" class="product-card__btn product-card__btn_add"></a>
+												</div>
+												<div class="product-card__tools-text">
+													Забрать сегодня
+												</div>
+											</div>
+											<div class="clearfix"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- pagination -->
+							<div class="row">
+								<div class="col-md-12">
+									<div class="catalog-controls">
+										<div class="btn-group" role="group">
+											<a href="#" class="link catalog-controls__btn btn_primary catalog-controls__show-more">Показать еще 30 товаров</a>
+											<div class="catalog-controls__btn btn_secondary select_no-border">
+												<select style="min-width:150px" name="" id="" class="select">
+														<option value="">Отображать по 30</option>
+														<option value="">Отображать по 10</option>
+													</select>
+												</a>
+											</div>
+										</div>
+									</div>
+									<nav aria-label="...">
+										<ul class="pagination page-pagination">
+											<li class="page-item disabled page-prev">
+												<a class="page-link" href="#" tabindex="-1"></a>
+											</li>
+											<li class="page-item active"><a class="page-link" href="#">1</a></li>
+											<li class="page-item ">
+												<a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
+											</li>
+											<li class="page-item"><a class="page-link" href="#">3</a></li>
+											<li class="page-item"><a class="page-link" href="#">4</a></li>
+											<li class="page-item"><a class="page-link" href="#">5</a></li>
+											<li class="page-item"><a class="page-link" href="#">6</a></li>
+											<li class="page-item page-next">
+												<a class="page-link" href="#"></a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</section>
+
+						<section class="section-info info ">
+							<article class="info__block">
+								<h3 class="info__title">
+									Холодильники безукоризненного качества по конкурентным ценам в Е-Техно
+								</h3>
+								<p class="info__inner">
+									Морозильные камеры и холодильники - высокотехнологичные бытовые приборы, без которых невозможно представить ни одну современную
+									кухню. Основное назначение данной техники - обеспечение сохранности продуктов, однако многие модели обладают рядом
+									дополнительных функций: ледогенератор, режим "Отпуск", защита от детей и другие. Сеть Е-Техно уже долгое время осуществляет
+									продажу холодильников в Минске, качество которых подтверждено не только соответствующими сертификатами, но и отзывами
+									потребителей, совершивших покупки в нашем интернет-магазине.
+								</p>
+							</article>
+							<article class="info__block">
+								<h3 class="info__title">Почему именно Е-Техно?
+								</h3>
+								<div class="info__inner">
+									<ul>
+										<li>
+											Ассортимент представленной техники поистине впечатляет. В каталоге Е-Техно около 300 наименований холодильников и морозильных
+											камер известных торговых брендов как отечественных, так и зарубежных. Воспользовавшись удобным поиском, вы без
+											труда сможете подобрать идеальную модель под параметры и стиль кухни.
+										</li>
+										<li>
+											Благодаря внедрённой стратегии интегрированных продаж, мы создаём для потребителей возможность выбора наиболее удобного способа
+											совершения покупки, её доставки и оплаты.
+										</li>
+										<li>
+											Ценовой диапазон представленной продукции довольно широк: от недорогих малогабаритных моделей с минимальным функциональным
+											набором до холодильников премиум-класса с огромным количеством встроенных опций. Стоимость представленной в каталоге
+											техники ниже среднерыночной, а действующие акции, скидки, специальные предложения и возможность рассрочки позволяют
+											купить холодильник в интернет-магазине даже семьям с небольшим достатком.
+										</li>
+										<li>
+											Делать покупки с Е-Техно приятно и удобно. Возможности поиска позволяют сортировать и фильтровать продукцию в соответствии
+											с требованиями, предъявляемыми к модели. Вы можете не только указать нужный бренд, но и задать цвет, объем, габариты,
+											количество камер, нужные функции, класс энергопотребления и другие параметры, что сэкономит время при выборе модели.
+										</li>
+										<li>
+											Помимо впечатляющего ассортимента продукции мы гарантируем своим клиентам её безукоризненное качество: сеть Е-Техно сотрудничает
+											исключительно с проверенными поставщиками, а каждая единица товара скрупулёзно проверяется, чтобы вы были уверены
+											в совершаемой покупке.
+										</li>
+									</ul>
+
+									<p>
+										Купить холодильник в Минске вы можете либо пройдя процедуру оформления товара через "Корзину", либо позвонив по одному из
+										указанных телефонов. Доставка может осуществляться как самовывозом, так и курьером на адрес покупателя.
+									</p>
+								</div>
+
+							</article>
+						</section>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<script src="libs/jrange-master/jquery.range.js"></script>
+	<script src="js/scripts.min.js"></script>
+
+</body>
+
+</html>

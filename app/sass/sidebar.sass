@@ -1,0 +1,76 @@
+@import "_vars"
+
+.filters-wrapper
+    background-color: #f5f5f5
+    padding: 5px 10px
+    margin-top: 10px
+
+.filter
+    &__block
+
+    &__title
+        font-size: 14px
+        color: $clr-default
+        font-weight: bold
+        text-decoration: none
+        &:before
+            content: "\e252"
+            display: inline-block
+            font-family: 'Glyphicons Halflings'
+            font-size: 7px
+            color: #a9a9a9
+            padding-right: 10px 
+            //МОЖНО И НУЖНО ИНАЧЕ то что вышек
+        &:hover, &:active, &:focus, &:visited
+            color: $clr-default
+            text-decoration: none
+    
+    &__block
+        & + .filter__block
+            border-top: 1px solid #dbdbdb
+        padding: 7px 0
+        padding-left: 18px 
+    
+    &__toggle
+        margin-left: -18px
+       
+    &__link
+        color: #a3a3a3
+        font-size: 14px
+            
+    &__collapse
+        padding: 
+            top: 10px
+            // left: 18px
+           
+            
+
+    &__checkbox-item
+        font-weight: normal
+
+
+.filter-block
+
+.slider-controls-wrapper
+    
+
+.slider-control
+    &_right
+        float: right
+    &_left
+        float: left
+    border: 1px solid #dbdbdb
+    background: #ffffff
+    border-radius: 3px
+    color: #000
+    text-align: right
+    font-size: 14px
+    box-shadow: inset 2px 3px 9px -2px rgba(0,0,0,.1)
+    padding: 3px 10px
+    height: 30px
+    line-height: 30px
+    width: 44.2%
+    max-width: 100px
+    & + .slider-control
+        margin-left: 3%
+

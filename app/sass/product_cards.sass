@@ -1,0 +1,102 @@
+@import "_vars"
+
+.product-card
+    border: 1px solid #cccccc
+    padding: 10px
+    padding-bottom: 4px
+    margin-bottom: 20px
+    &__title
+        font-size: 15px
+        line-height: 1.2
+        float: left
+        width: 72%
+        min-height: 54px
+        a
+            color: #000000
+    &__caption  
+        float: right
+        margin:
+            top: -5px
+            right: -5px
+        font-weight: bold
+        font-size: 18px
+    &__ratings
+        color: $clr-accent-red
+
+        display: inline-block
+        font-size: 8px
+        float: left
+       
+    &__indicator
+        font-size: 11px
+        text-align: right
+        display: inline-block
+        float: right
+        line-height: 1
+
+    &__img
+        text-align: center
+        display: block
+        text-decoration: none
+        margin: 27px 0 47px
+        img
+            width: 100%
+            max-width: 247px
+            max-height: 220px
+    &__footer
+       
+    &__tools 
+        text-align: right
+        display: inline-block
+        float: right
+    &__prices
+        display: inline-block
+        float: left
+    &__btn
+        width: 36px
+        height: 35px
+        display: inline-block
+        background-repeat: no-repeat 
+        & + .product-card__btn
+            margin-left: 3px
+        &_compare
+            background-image: url("../img/btn-sprite.png")
+            background-position: 1px 0
+        &_add
+            background-image: url("../img/btn-sprite.png")
+            background-position: -90px 0
+    &__tools-text
+        color: #18a315
+        font-size: 10px
+        font-weight: bold
+        
+
+.price-block   
+    &__actual
+        color: #0053a3
+        font-weight: bold
+        font-size: 30px
+        line-height: 1.2
+        span, sup
+            font-size: 0.6666em
+            font-weight: 400
+    &__benefit
+        font-size: 10px
+        font-weight: bold
+        display: inline-block
+    &__old
+        font-size: 12px
+        color: #cccccc
+        position: relative
+        display: inline-block
+        &:after
+            content: ""
+            display: block
+            width: 100%
+            border-bottom: 1px solid #ccc
+            position: absolute
+            top: 50%
+
+
+
+        

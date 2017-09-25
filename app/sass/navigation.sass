@@ -1,0 +1,40 @@
+@import "_vars"
+
+.nav
+    margin-top: 10px
+    margin-bottom: 8px
+    &__list
+        display: inline-flex
+        flex-direction: row
+        flex-wrap: wrap
+        justify-content: space-between
+        width: 100%
+        // justify-content: space-around
+        // align-content: stretch
+        border: 1px solid $clr-accent
+        font-size: 0.9375em
+        padding: 10px 0
+        height: 40px
+    &__item
+        & + .nav__item
+            border-left: 1px solid $clr-accent
+        padding: 0 17px
+        text-align: center
+        line-height: 20px
+        a
+            color: $clr-default;
+            &:hover
+                text-decoration: underline
+                  
+
+.item_warning
+    color: $clr-accent-red
+    font-size: 16px
+    font-weight: bold
+    text-transform: uppercase
+    a 
+        color: inherit
+.nav__icon
+    margin-left: 5px
+    float: right
+    margin-top: -5px

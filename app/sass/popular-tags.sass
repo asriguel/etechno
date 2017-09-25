@@ -1,0 +1,84 @@
+@import "_vars"
+
+//TODO: check paddings
+//TODO: check underline
+
+.tags-popular
+    font-size: 14px
+    padding: 7px 0
+    margin-bottom: 20px
+    &__link
+        float: right
+        margin-top: 2px
+    &__item
+        &:hover
+            background: #f7f7f7
+            a 
+                text-decoration: none
+.tags
+    &__list
+        display: inline-block
+        font-size: 0
+    &__title
+        font-weight: bold
+        display: inline-block
+        margin-right: 10px
+    
+   
+        
+.tag
+    display: inline-block
+    border: 1px solid #f4f4f4
+    border-radius: 3px
+    text-transform: lowercase
+    line-height: 0.7
+    padding: 4px
+    cursor: pointer
+    
+    &__count
+        background-color: #f7f7f7
+        color: #666666
+        font-size: 11px
+        padding: 5px
+        border-radius: 4px
+        margin-right: -5px
+        margin-top: -5px
+        font-weight: normal
+        margin-left: 10px
+        display: inline-block
+        height: 20px
+        min-width: 26px
+        text-align: center
+    
+    margin-right: 12px
+    a
+        color: $clr-default
+        font-size: 12px
+        font-weight: bold
+.tags__line
+    max-height: 64px
+    overflow: hidden
+
+.tags-category
+    margin-bottom: 10px
+    position: relative
+    &__link
+        position: absolute
+        z-index: 2
+        right: 0
+        bottom: 19px
+    &__item
+        border: 1px solid $clr-accent
+        text-transform: none
+        font-weight: bold
+        line-height: 14px
+        padding: 4px 5px 3px
+        height: 22px
+        margin-bottom: 10px
+        a 
+            font-size: 13px
+        
+        margin-right: 10px
+
+
+

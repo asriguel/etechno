@@ -1,0 +1,23 @@
+@import "_vars"
+
+//TODO: add icon and hover 
+
+.breadcrumbs
+    &__list
+        padding: 4px 0
+    &__item
+        font-size: 13px
+        font-weight: bold
+        display: inline-block
+        & + li
+            // padding-left: 25px
+            &:before
+                content: "\e250"
+                font-family: 'Glyphicons Halflings'
+                font-size: 7px
+                padding: 0 10px
+        a
+            color: $clr-default
+            &:hover
+                text-decoration: none
+                text-decoration: underline
